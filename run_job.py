@@ -19,6 +19,9 @@ try:
     print("Uruchamiam funkcję process_async_jobs()...")
     cur.execute("SELECT process_async_jobs();")
 
+    print("Odświeżam dane zagregowane...")
+    cur.execute("SELECT refresh_all_aggregated_data();")
+
     # Zatwierdź transakcję
     conn.commit()
 
